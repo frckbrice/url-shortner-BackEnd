@@ -9,7 +9,7 @@ const path = require("path");
 const corsOptions = {
   origin: [
     "http://localhost:5173",
-    "https://url-shortner-frontend-git-feature-header-frckbrice.vercel.app/",
+    "https://url-shortner-frontend-iidjkh9rl-frckbrice.vercel.app/",
     "*",
   ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
@@ -25,7 +25,7 @@ app.use(
 app.options("*", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://url-shortner-frontend-n6w4-git-feature-header-frckbrice.vercel.app/",
+    "https://url-shortner-frontend-iidjkh9rl-frckbrice.vercel.app/",
     "*"
   );
   res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Add other headers here
