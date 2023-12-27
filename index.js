@@ -17,11 +17,11 @@ app.use(
   })
 );
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(cors(corsOptions));
 app.use("/api/shorturl", require("./routes/url"));
 
-app.use(express.static(path.join(__dirname + "/public/api")));
+// app.use(express.static(path.join(__dirname + "/public/api")));
 
 // connection to databasers
 app.listen(port, () => {
