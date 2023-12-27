@@ -5,6 +5,7 @@ const urlParser = require("url");
 module.exports = {
   original_url: (req, res, next) => {
     const { url, url_id } = req.body;
+    console.log(url, url_id);
     const client_url = req.headers.origin;
     // parsing the url to get the hostname
     const url_parsing = urlParser.parse(url, true).hostname;
