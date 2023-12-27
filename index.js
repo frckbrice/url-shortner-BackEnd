@@ -18,14 +18,14 @@ app.use(
 );
 
 //* some options to add for CORES issues
-app.options("*", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://uner.vercel.app/", "*");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Add other headers here
-  res.setHeader("Access-Control-Allow-Methods", ", GET, POST"); // Add other methods here
-  res.send();
-});
+// app.options("*", (req, res) => {
+//   res.setHeader("Access-Control-Allow-Origin", "https://uner.vercel.app/", "*");
+//   res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Add other headers here
+//   res.setHeader("Access-Control-Allow-Methods", ", GET, POST"); // Add other methods here
+//   res.send();
+// });
 app.use(express.urlencoded({ extended: true }));
-app.use(cors(corsOptions));
+app.use(cors());
 app.use("/api/shorturl", require("./routes/url"));
 
 app.use(express.static(path.join(__dirname + "/public/api")));
