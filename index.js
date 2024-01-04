@@ -8,7 +8,7 @@ const path = require("path");
 
 const corsOptions = {
   origin: [
-    "https://uner.vercel.app/",
+    "https://uner.vercel.app/", "url-shortner-frontend-n6w4-git-main-frckbrice.vercel.app", "url-shortner-frontend-n6w4-59qz658sh-frckbrice.vercel.app"
   ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
@@ -20,12 +20,12 @@ app.use(
 );
 
 //* some options to add for CORES issues
-app.options("*", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://uner.vercel.app/");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Add other headers here
-  res.setHeader("Access-Control-Allow-Methods", ", GET, POST"); // Add other methods here
-  res.send();
-});
+// app.options("*", (req, res) => {
+//   res.setHeader("Access-Control-Allow-Origin", "https://uner.vercel.app/");
+//   res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Add other headers here
+//   res.setHeader("Access-Control-Allow-Methods", ", GET, POST"); // Add other methods here
+//   res.send();
+// });
 app.use(express.urlencoded({ extended: true }));
 app.use(cors(corsOptions));
 app.use("/api/shorturl", require("./routes/url"));
