@@ -9,7 +9,7 @@ const path = require("path");
 const corsOptions = {
   origin: [
     "http://localhost:5173",
-    "https://url-shortner-frontend-git-feature-header-frckbrice.vercel.app/",
+    "https://uner.vercel.app/",
     "*",
   ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
